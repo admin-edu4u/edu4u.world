@@ -170,7 +170,7 @@ input[type=number] {
 }
 
 .header-option {
-  color: #FFF;
+  color: #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -178,7 +178,7 @@ input[type=number] {
 }
 
 .header-option-black {
-  color: #1F1F1F;
+  color: #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -186,11 +186,11 @@ input[type=number] {
 }
 
 .header-option-black.active {
-  color: #1A124E;
+  color: #111111;
 }
 
 .header-login {
-  color: #FFF;
+  color: #111111;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -199,7 +199,7 @@ input[type=number] {
 }
 
 .header-login-active{
-  color: #1A124E;
+  color: #111111;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -211,7 +211,7 @@ input[type=number] {
   padding: 16px;
   border-radius: 8px;
   background: #FFF;
-  color: #1A124E;
+  color: #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -221,7 +221,7 @@ input[type=number] {
 .header-started-active{
   padding: 16px;
   border-radius: 8px;
-  background: #1A124E;
+  background: #111111;
   color: #FFF;
   font-size: 14px;
   font-style: normal;
@@ -232,18 +232,18 @@ input[type=number] {
 .header-apply{
   padding: 16px;
   border-radius: 8px;
-  border: 2px solid #FFF;
+  border: 2px solid #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  color: #FFF;
+  color: #111111;
 }
 
 .header-apply-active{
   padding: 16px;
   border-radius: 8px;
-  border: 2px solid #1A124E;
+  border: 2px solid #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -252,7 +252,7 @@ input[type=number] {
 }
 
 .home-title-1 {
-  color: #FFF;
+  color: #111111;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -260,7 +260,7 @@ input[type=number] {
 }
 
 .home-title-2 {
-  color: #FFF;
+  color: #111111;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -271,7 +271,7 @@ input[type=number] {
   padding: 24px 36px;
   border-radius: 8px;
   background: #FFF;
-  color: #1A124E;
+  color: #111111;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -286,7 +286,7 @@ input[type=number] {
 }
 
 .home-cat-text{
-  color: #1F1F1F;
+  color: #111111;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -302,7 +302,7 @@ input[type=number] {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  color: #1A124E;
+  color: #111111;
 }
 
 .home-desc-1 {
@@ -314,7 +314,7 @@ input[type=number] {
 }
 
 .home-title-3{
-  color: #1A124E;
+  color: #111111;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -322,7 +322,7 @@ input[type=number] {
 }
 
 .home-title-4{
-  color: #666;
+  color: #111111;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -379,7 +379,7 @@ input[type=number] {
 }
 
 .home-guide-title {
-  color: #1A124E;
+  color: #111111;
   text-align: center;
   font-size: 24px;
   font-style: normal;
@@ -413,7 +413,7 @@ input[type=number] {
 }
 
 .review-title {
-  color: #999;
+  color: #111111;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -429,7 +429,7 @@ input[type=number] {
 }
 
 .home-blog {
-  color: #3F3F3F;
+  color: #111111;
   text-align: center;
   font-size: 32px;
   font-style: normal;
@@ -438,7 +438,7 @@ input[type=number] {
 }
 
 .blog-title {
-  color: #141414;
+  color: #111111;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -446,7 +446,7 @@ input[type=number] {
 }
 
 .start-pathway {
-  color: #3F3F3F;
+  color: #111111;
   text-align: center;
   font-size: 36px;
   font-style: normal;
@@ -2211,7 +2211,7 @@ tr.no-border th {
 
 .dropdown-option-icon {
   border-radius: 4px;
-  background: rgba(26, 18, 78, 0.10);
+  background: rgba(17, 17, 17, 0.10);
   width: 42px;
   height: 42px;
   align-items: center;
@@ -2220,7 +2220,7 @@ tr.no-border th {
 }
 
 .dropdown-option-icon-main-title {
-  color: #1F1F1F;
+  color: #111111;
   font-size: 14px;
   font-weight: 500;
 }
@@ -2295,7 +2295,7 @@ tr.no-border th {
   .start-pathway {
     font-size: 24px;
     font-weight: 600;
-    color: #1A124E;
+    color: #111111;
     text-align: center;
   }
 

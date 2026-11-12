@@ -88,7 +88,7 @@ return [
 
   'feesWaiver' => 'Tuition Fee Waiver',
 
-  'campusVisit' => 'Visit Campus',
+  'campusVisit' => 'Visit',
 
   'visitDesc' => 'After submitting, we will contact you on WhatsApp to confirm the schedule',
 
@@ -150,7 +150,7 @@ return [
 
   'uploadDoscDesc' => 'Only jpg, png or pdf below 5mb are supported',
 
-  'compareCourse' => 'Compare Courses',
+  'compareCourse' => 'Compare',
 
   'academicResult' => 'Academic Result',
 
@@ -233,7 +233,7 @@ return [
   'k12Desc' => 'Browse international schools',
   'scholarshipDesc' => 'Browse scholarships from all universities',
   'visitDesc' => 'Apply to visit campuses of our universities',
-  'enquireNow' => 'Enquire Now',
+  'enquireNow' => 'Enquire',
   'applyNow' => 'Apply Now',
   'applyNowUncap' => 'Apply now',
   'logIn' => 'Log In',

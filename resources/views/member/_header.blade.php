@@ -41,7 +41,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -75,8 +75,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -86,7 +86,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -98,9 +98,9 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -110,7 +110,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -122,8 +122,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -133,7 +133,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -155,7 +155,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -164,16 +164,16 @@ $agent = new Agent();
           </div>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option cursor" href="/careers">{{ __('lang.careers') }}</a>
+          <a class="ms-6 header-option cursor" href="/careers">{{ __('lang.careers') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option cursor" href="/blog">{{ __('lang.blog') }}</a>
+          <a class="ms-6 header-option cursor" href="/blog">{{ __('lang.blog') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option cursor" id="pathway">{{ __('lang.pathway360') }}</a>
+          <a class="ms-6 header-option cursor" id="pathway">{{ __('lang.pathway360') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
+          <a class="ms-6 header-option cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
         </div>
       </div>
     </div>
@@ -186,15 +186,15 @@ $agent = new Agent();
       <a class="header-apply ms-5 cursor text-center" href="/explore/?tab=course">{{ __('lang.applyNow') }}</a>
       <!-- <a href="{{ route('change.language', ['locale' => 'ch']) }}" class="language-icon">
           <svg class="ms-5 cursor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
       </a> -->
       <div class="dropdown float-end">
           <button class="btn dropdown-toggle1" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <svg class="ms-5 cursor changelanguage" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
           </button>
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -206,7 +206,7 @@ $agent = new Agent();
       <div>
       @if(Session::has('login_user_id'))
       <svg class="ms-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
         <g clip-path="url(#clip0_200_9388)">
         <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
         </g>
@@ -244,7 +244,7 @@ $agent = new Agent();
     <div class="col-4 d-flex justify-content-end align-items-center">
     @if(Session::has('login_user_id'))
       <svg class="me-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
         <g clip-path="url(#clip0_200_9388)">
         <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
         </g>
@@ -256,7 +256,7 @@ $agent = new Agent();
       </svg>
       @endif
       <svg id="kt_drawer_example_dismiss_button" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
@@ -298,7 +298,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -332,8 +332,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -343,7 +343,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -355,9 +355,9 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -367,7 +367,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -379,8 +379,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -390,7 +390,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -402,7 +402,7 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -412,7 +412,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -421,16 +421,16 @@ $agent = new Agent();
           </div>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black cursor" href="/careers">{{ __('lang.careers') }}</a>
+          <a class="ms-6 header-option-black cursor" href="/careers">{{ __('lang.careers') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black cursor" href="/blog">{{ __('lang.blog') }}</a>
+          <a class="ms-6 header-option-black cursor" href="/blog">{{ __('lang.blog') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black cursor" id="pathway">{{ __('lang.pathway360') }}</a>
+          <a class="ms-6 header-option-black cursor" id="pathway">{{ __('lang.pathway360') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
+          <a class="ms-6 header-option-black cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
         </div>
       </div>
     </div>
@@ -442,14 +442,14 @@ $agent = new Agent();
       @endif
       <a class="header-apply-active ms-5 text-center" href="/explore/?tab=course">{{ __('lang.applyNow') }}</a>
       <!-- <svg class="ms-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg> -->
       <div class="dropdown">
           <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <svg class="ms-5 cursor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1A124E">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
           </button>
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -460,7 +460,7 @@ $agent = new Agent();
       </div>
       @if(Session::has('login_user_id'))
       <svg class="ms-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
         <g clip-path="url(#clip0_200_9388)">
         <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
         </g>
@@ -496,7 +496,7 @@ $agent = new Agent();
       <div class="col-4 d-flex justify-content-end align-items-center">
         @if(Session::has('login_user_id'))
           <svg class="me-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+            <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
             <g clip-path="url(#clip0_200_9388)">
             <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
             </g>
@@ -508,7 +508,7 @@ $agent = new Agent();
           </svg>
         @endif
         <svg id="kt_drawer_example_dismiss_button" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
   </div>
@@ -550,7 +550,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -572,7 +572,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -584,8 +584,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 14.25C14 14.664 14.336 15 14.75 15H16C16.2652 15 16.5196 14.8946 16.7071 14.7071C16.8946 14.5196 17 14.2652 17 14V13C17 12.7348 16.8946 12.4804 16.7071 12.2929C16.5196 12.1054 16.2652 12 16 12H15C14.7348 12 14.4804 11.8946 14.2929 11.7071C14.1054 11.5196 14 11.2652 14 11V10C14 9.73478 14.1054 9.48043 14.2929 9.29289C14.4804 9.10536 14.7348 9 15 9H16.25C16.4489 9 16.6397 9.07902 16.7803 9.21967C16.921 9.36032 17 9.55109 17 9.75M7 9L9 15L11 9" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -595,7 +595,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -607,9 +607,9 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 22.0001C17.5229 22.0001 22 17.523 22 12.0001C22 6.47725 17.5229 2.00012 12 2.00012C6.47715 2.00012 2 6.47725 2 12.0001C2 17.523 6.47715 22.0001 12 22.0001Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 15.4928C4.31596 16.0205 5.2633 16.0205 5.84195 15.4928C6.70995 14.7012 5.96095 12.2989 7.1766 11.6363C8.3922 10.9738 10.2443 13.9107 11.9754 12.9443C13.7064 11.9779 11.8123 9.40115 13.0136 8.3565C14.2149 7.31185 15.777 8.49 16.0501 6.74325C16.3231 4.99652 14.7761 5.7541 14.4792 4.10346C14.2813 3.00305 14.2813 2.42442 14.4792 2.36755" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.5105 21.6753C13.5734 20.7163 13.2361 19.8249 13.4985 19.001C13.8921 17.7652 14.5413 17.8382 14.8244 17.0741C15.1075 16.31 14.3078 15.2217 16.0821 14.2913C17.265 13.6711 18.8915 14.3897 20.9614 16.4472" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -619,7 +619,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -631,8 +631,8 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.573 8.46298L11.232 4.13398C11.3152 4.09243 11.407 4.0708 11.5 4.0708C11.593 4.0708 11.6848 4.09243 11.768 4.13398L20.427 8.46398C20.5266 8.51384 20.6103 8.59044 20.6688 8.68519C20.7274 8.77994 20.7584 8.88911 20.7584 9.00048C20.7584 9.11185 20.7274 9.22102 20.6688 9.31577C20.6103 9.41052 20.5266 9.48712 20.427 9.53698L11.768 13.866C11.6848 13.9075 11.593 13.9292 11.5 13.9292C11.407 13.9292 11.3152 13.9075 11.232 13.866L2.573 9.53598C2.47342 9.48612 2.38968 9.40952 2.33116 9.31477C2.27264 9.22002 2.24164 9.11085 2.24164 8.99948C2.24164 8.88811 2.27264 8.77894 2.33116 8.68419C2.38968 8.58944 2.47342 8.51284 2.573 8.46298Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22.5 13V9.5L20.5 8.5M4.5 10.5V15.912C4.49993 16.2904 4.60719 16.661 4.80933 16.9809C5.01148 17.3007 5.30021 17.5567 5.642 17.719L10.642 20.093C10.9101 20.2203 11.2032 20.2864 11.5 20.2864C11.7968 20.2864 12.0899 20.2203 12.358 20.093L17.358 17.719C17.6998 17.5567 17.9885 17.3007 18.1907 16.9809C18.3928 16.661 18.5001 16.2904 18.5 15.912V10.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -642,7 +642,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -654,7 +654,7 @@ $agent = new Agent();
                   <div class="d-flex">
                     <div class="dropdown-option-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.252 9.97501L16.912 4.42301C18.612 3.61301 20.386 5.38801 19.577 7.08901L14.025 18.748C13.266 20.341 10.966 20.243 10.346 18.59L9.32 15.851C9.21975 15.5838 9.06347 15.3412 8.86167 15.1393C8.65986 14.9375 8.41721 14.7813 8.15 14.681L5.41 13.654C3.758 13.034 3.659 10.734 5.252 9.97501Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                     <div class="ms-3">
@@ -664,7 +664,7 @@ $agent = new Agent();
                   </div>
                   <div class="ms-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M1 1L5 5L1 9" stroke="#1F1F1F" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 1L5 5L1 9" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -673,16 +673,16 @@ $agent = new Agent();
           </div>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black {{Request::is('careers') ? 'active' : '' }} cursor" href="/careers">{{ __('lang.careers') }}</a>
+          <a class="ms-6 header-option-black {{Request::is('careers') ? 'active' : '' }} cursor" href="/careers">{{ __('lang.careers') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black {{Request::is('blog') ? 'active' : '' }} cursor" href="/blog">{{ __('lang.blog') }}</a>
+          <a class="ms-6 header-option-black {{Request::is('blog') ? 'active' : '' }} cursor" href="/blog">{{ __('lang.blog') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black cursor {{Request::is('personality') ? 'active' : '' }}" id="pathway">{{ __('lang.pathway360') }}</a>
+          <a class="ms-6 header-option-black cursor {{Request::is('personality') ? 'active' : '' }}" id="pathway">{{ __('lang.pathway360') }}</a>
         </div>
         <div class="col-auto">
-          <a class="ms-7 header-option-black {{Request::is('contact-us') ? 'active' : '' }} cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
+          <a class="ms-6 header-option-black {{Request::is('contact-us') ? 'active' : '' }} cursor" href="/contact-us">{{ __('lang.enquireNow') }}</a>
         </div>
       </div>
     </div>
@@ -694,14 +694,14 @@ $agent = new Agent();
       @endif
       <a class="header-apply-active ms-5 text-center" href="/explore/?tab=course">{{ __('lang.applyNow') }}</a>
       <!-- <svg class="ms-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg> -->
       <div class="dropdown">
           <button class="btn dropdown-toggle1" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               <svg class="ms-5 cursor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1A124E">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12H22M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
           </button>
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -712,7 +712,7 @@ $agent = new Agent();
       </div>
       @if(Session::has('login_user_id'))
       <svg class="ms-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
         <g clip-path="url(#clip0_200_9388)">
         <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
         </g>
@@ -746,7 +746,7 @@ $agent = new Agent();
     <div class="col-4 d-flex justify-content-end align-items-center">
     @if(Session::has('login_user_id'))
       <svg class="me-5 cursor" id="profile_btn" width="40" height="40" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#E4E4E4"/>
+        <circle cx="13" cy="13" r="12" fill="#F6F6F6" stroke="#111111"/>
         <g clip-path="url(#clip0_200_9388)">
         <path d="M17.9343 17.12C17.2995 15.9651 16.3083 15.0653 15.1202 14.5653C15.711 14.106 16.1475 13.4656 16.3677 12.7349C16.5879 12.0042 16.5807 11.2202 16.3471 10.494C16.1136 9.76775 15.6655 9.13609 15.0664 8.68848C14.4673 8.24087 13.7475 8 13.009 8C12.2705 8 11.5507 8.24087 10.9516 8.68848C10.3525 9.13609 9.90445 9.76775 9.67091 10.494C9.43737 11.2202 9.43019 12.0042 9.65039 12.7349C9.87059 13.4656 10.307 14.106 10.8978 14.5653C9.70976 15.0653 8.71857 15.9651 8.0838 17.12C8.04446 17.1855 8.01825 17.2586 8.00671 17.3349C7.99517 17.4111 7.99854 17.489 8.01663 17.5639C8.03471 17.6388 8.06714 17.7092 8.11198 17.7708C8.15682 17.8325 8.21316 17.8841 8.27764 17.9228C8.34213 17.9614 8.41345 17.9862 8.48737 17.9956C8.56128 18.0051 8.63628 17.9991 8.70791 17.9779C8.77953 17.9568 8.84632 17.9209 8.9043 17.8724C8.96228 17.824 9.01027 17.7639 9.04541 17.6959C9.88434 16.1927 11.3659 15.2962 13.009 15.2962C14.6522 15.2962 16.1337 16.1932 16.9726 17.6959C17.0488 17.8228 17.1696 17.9141 17.3095 17.9504C17.4494 17.9867 17.5975 17.9652 17.7224 17.8904C17.8472 17.8156 17.9392 17.6934 17.9787 17.5496C18.0183 17.4058 18.0023 17.2518 17.9343 17.12ZM10.6015 11.6488C10.6015 11.1553 10.7427 10.6728 11.0072 10.2624C11.2718 9.85197 11.6478 9.5321 12.0877 9.34322C12.5276 9.15433 13.0117 9.10491 13.4787 9.2012C13.9457 9.2975 14.3747 9.53518 14.7114 9.88419C15.0481 10.2332 15.2774 10.6779 15.3703 11.162C15.4632 11.6461 15.4155 12.1479 15.2333 12.6039C15.0511 13.0599 14.7425 13.4496 14.3466 13.7239C13.9507 13.9981 13.4852 14.1444 13.009 14.1444C12.3707 14.1437 11.7588 13.8805 11.3075 13.4127C10.8561 12.9448 10.6022 12.3105 10.6015 11.6488Z" fill="#1F1F1F"/>
         </g>
@@ -758,7 +758,7 @@ $agent = new Agent();
       </svg>
       @endif
       <svg id="kt_drawer_example_dismiss_button" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="#1A124E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.3335 16H26.6668M5.3335 8H26.6668M5.3335 24H26.6668" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
 
