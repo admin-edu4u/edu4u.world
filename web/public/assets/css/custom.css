@@ -1080,8 +1080,17 @@ input[type=number] {
   background: #f6f6f6 !important;
 }
 
+/* Toolbar: search grows to fill the row, sort keeps a fixed share —
+   they stay side by side on one row and the row fits the content area */
+.explore-toolbar .filter-width {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+}
+
 .explore-sort-wrap {
-  width: 28%;
+  flex: 0 0 28%;
+  width: auto;
 }
 
 .explore-sort {
