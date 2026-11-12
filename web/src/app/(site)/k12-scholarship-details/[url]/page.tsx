@@ -1,3 +1,4 @@
+import { Medal } from "@phosphor-icons/react/dist/ssr";
 import { notFound } from "next/navigation";
 import { createPublicClient } from "@/lib/supabase/server";
 import { CDN } from "@/lib/cdn";
@@ -76,15 +77,15 @@ export default async function K12ScholarshipDetailsPage({ params }: { params: Pr
         .submission-user-label { font-size: 13px; color: #999; }
         .course-details { font-size: 14px; color: #1F1F1F; }
         .criteria { font-size: 20px; font-weight: 700; color: #1F1F1F; }
-        .table-header { font-size: 13px; font-weight: 600; color: #999; padding-bottom: 8px; border-bottom: 1px solid #E4E4E4; }
-        .table-body { font-size: 14px; color: #1F1F1F; padding: 8px 0; border-bottom: 1px solid #E4E4E4; vertical-align: top; }
+        .table-header { font-size: 13px; font-weight: 600; color: #999; padding-bottom: 8px; border-bottom: 1px solid #E4E4E4; overflow-wrap: anywhere; }
+        .table-body { font-size: 14px; color: #1F1F1F; padding: 8px 0; border-bottom: 1px solid #E4E4E4; vertical-align: top; overflow-wrap: anywhere; }
         .uni-name-1 { font-size: 22px; font-weight: 700; color: #1F1F1F; }
         .review-desc { font-size: 15px; color: #666; }
         .uni-logo { width: 80px; height: 80px; object-fit: contain; border-radius: 8px; border: 1px solid #E4E4E4; }
       `}</style>
 
       <div className="row">
-        <div className="col-2">
+        <div className="col-12 col-lg-2 mb-4 mb-lg-0">
           {logo ? (
             <img src={logo} className="uni-logo" alt={entityName} />
           ) : (
@@ -94,18 +95,14 @@ export default async function K12ScholarshipDetailsPage({ params }: { params: Pr
           )}
         </div>
 
-        <div className="col-10 mt-5">
-          <div className="ms-5">
+        <div className="col-12 col-lg-10 mt-2">
+          <div className="ms-0 ms-lg-5">
             <span className="uni-name-1">{scholarship.s_title}</span>
             {entityName && <span className="review-desc d-block">{entityName}</span>}
 
             {maxDiscount && (
               <div className="d-flex align-items-center mt-5 gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                  <path d="M18 24C23.799 24 28.5 19.299 28.5 13.5C28.5 7.701 23.799 3 18 3C12.201 3 7.5 7.701 7.5 13.5C7.5 19.299 12.201 24 18 24Z" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M18 18C20.485 18 22.5 15.985 22.5 13.5C22.5 11.015 20.485 9 18 9C15.515 9 13.5 11.015 13.5 13.5C13.5 15.985 15.515 18 18 18Z" fill="#1F1F1F" />
-                  <path d="M10.5 21V30.351L18 28.75L25.5 30.351V21" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Medal weight="light" size={24} color="#1F1F1F" />
                 <span className="award-text">{t("awardsUpTo")}</span>
                 <span className="award-amt">{maxDiscount}</span>
               </div>

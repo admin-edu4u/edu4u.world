@@ -131,7 +131,7 @@ export async function fetchPathwayRecommendedCourses(
 
   const uniMap = new Map((unis ?? []).map((u) => [u.u_id, u]));
 
-  let rows: RecommendedCourseRow[] = [];
+  const rows: RecommendedCourseRow[] = [];
 
   for (const c of courses) {
     const uni = uniMap.get(c.c_uni);

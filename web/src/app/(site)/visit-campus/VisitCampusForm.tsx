@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckCircle, Minus, Plus } from "@phosphor-icons/react/dist/ssr";
 import { useMemo, useState } from "react";
 import { SearchableSelect } from "@/components/ui/SearchableSelect";
 import { MalaysianPhoneInput } from "@/components/ui/MalaysianPhoneInput";
@@ -103,9 +104,7 @@ export default function VisitCampusForm({ universities }: { universities: Univer
     return (
       <div className="sucess-submission text-center py-20">
         <div className="text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <path fillRule="evenodd" clipRule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM33.9007 18.1221C34.6309 17.2932 34.5509 16.0294 33.7221 15.2993C32.8932 14.5691 31.6294 14.6491 30.8993 15.4779L19.7143 28.1744L17.1007 25.2077C16.3706 24.3788 15.1068 24.2989 14.2779 25.029C13.4491 25.7592 13.3691 27.023 14.0993 27.8518L18.2136 32.5221C18.5933 32.953 19.1399 33.2 19.7143 33.2C20.2887 33.2 20.8353 32.953 21.215 32.5221L33.9007 18.1221Z" fill="#29DC50" />
-          </svg>
+          <CheckCircle weight="fill" size={24} color="#29DC50" />
         </div>
         <span className="pt-3 d-block visit-campus-text">{t("submitSuccess")}</span>
         <span className="d-block uni-name text-center pt-3">{t("submitWhatsapp")}</span>
@@ -198,9 +197,7 @@ export default function VisitCampusForm({ universities }: { universities: Univer
                 onClick={() => setPax((p) => Math.max(1, p - 1))}
                 style={{ border: "1px solid #1A124E", borderRadius: "50%", width: 36, height: 36 }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
-                  <path d="M1 1H13" stroke="#999999" strokeLinecap="round" />
-                </svg>
+                <Minus weight="light" size={24} color="#999999" />
               </button>
               <input type="text" name="pax" className="form-control text-center" readOnly value={pax} style={{ width: 60, border: 0 }} />
               <button
@@ -209,10 +206,7 @@ export default function VisitCampusForm({ universities }: { universities: Univer
                 onClick={() => setPax((p) => p + 1)}
                 style={{ border: "1px solid #1A124E", borderRadius: "50%", width: 36, height: 36, background: "#1A124E" }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 7H13" stroke="white" strokeLinecap="round" />
-                  <path d="M7 1L7 13" stroke="white" strokeLinecap="round" />
-                </svg>
+                <Plus weight="light" size={24} color="white" />
               </button>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createPublicClient } from "@/lib/supabase/server";
@@ -51,9 +52,7 @@ export default async function BlogDetailsPage({ params }: { params: Promise<Para
         <div className="mw-1200 mx-auto">
           <div className="d-flex align-items-center">
             <Link href="/blog">
-              <svg className="me-10" xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
-                <path d="M9 1L1 9L9 17" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <ArrowLeft weight="light" size={24} color="black" className="me-10" />
             </Link>
             <span className="blog-header-title">{t("edu4uBlog")}</span>
           </div>

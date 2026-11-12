@@ -1,5 +1,6 @@
 "use client";
 
+import { Plus } from "@phosphor-icons/react/dist/ssr";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { formatMoney } from "@/lib/money";
@@ -144,10 +145,7 @@ export default function CompareCourseClient({ allCourses }: { allCourses: Course
                       style={{ cursor: "pointer" }}
                       id={`add_course${slot + 1}`}
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
-                        <path d="M13.5 24.5H33.5" stroke="#999999" strokeWidth="1.5" strokeLinecap="round" />
-                        <path d="M23.5 14.5L23.5 34.5" stroke="#999999" strokeWidth="1.5" strokeLinecap="round" />
-                      </svg>
+                      <Plus weight="light" size={24} color="#999999" />
                       <span className="d-block add-course">{t("addCourse")}</span>
                     </div>
                   )}

@@ -12,7 +12,7 @@ export default function EventsPage() {
   return (
     <div className="pb-20">
       <div className="position-relative">
-        <img src={`${CDN}/images/assets/event-background.png`} className="w-100" alt="Events background" />
+        <img src={`${CDN}/images/assets/event-background.png`} className="w-100" alt="Events background" width={5760} height={1840} />
         <div className="mw-1200 text-center event-overlay-text position-absolute">
           <span className="d-block event-title-1">Events</span>
           <span className="d-block event-title-2 pt-5">Event Highlights</span>
@@ -20,9 +20,9 @@ export default function EventsPage() {
         </div>
       </div>
       <div className="mw-1200 mt-10 mx-auto">
-        <div className="col-12 row">
+        <div className="row">
           {PLACEHOLDER_EVENTS.map((evt, i) => (
-            <div key={i} className="col-4 mt-15">
+            <div key={i} className="col-12 col-sm-6 col-lg-4 mt-15">
               <Link href="/event-details" className="cursor">
                 <img className="w-100 br-8" src={`${CDN}/images/assets/blog-img.png`} alt={evt.title} />
                 <div>

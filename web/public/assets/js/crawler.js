@@ -274,25 +274,31 @@ function marqueeInit(config){
   }
  }
 
- Marq.prototype.runit = function(){
-  var cObj = this, d = this.mq.direction === 'right'? 1 : -1;
-  if(this.mq.stopped || this.mq.stopMarquee){
-   setTimeout(function(){cObj.runit();}, 300);
-   return;
+Marq.prototype.runit = function(){
+   var cObj = this, d = this.mq.direction === 'right'? 1 : -1;
+   if(this.mq.stopped || this.mq.stopMarquee){
+    setTimeout(function(){cObj.runit();}, 300);
+    return;
+   }
+   if(this.mq.mouse != 'cursor driven')
+    this.mq.inc = Math.max(1, this.mq.inc);
+   // Re-measure the content width on every cycle. setup() only runs once
+   // (guarded by this.mq.setup), but marquee content often widens after
+   // setup when images finish loading or the page reflows. A stale this.w
+   // makes the wrap point fire too early, which produces widening gaps and
+   // the illusion of the crawl slowing down.
+   this.w = this.m[0].offsetWidth;
+   if(d * parseInt(this.m[0].style.left) >= this.w)
+    this.m[0].style.left = parseInt(this.m[1].style.left) - d * this.w + 'px';
+   if(d * parseInt(this.m[1].style.left) >= this.w)
+    this.m[1].style.left = parseInt(this.m[0].style.left) - d * this.w + 'px';
+   this.m[0].style.left = parseInt(this.m[0].style.left) + d * this.mq.inc + 'px';
+   this.m[1].style.left = parseInt(this.m[1].style.left) + d * this.mq.inc + 'px';
+   if(window.opera && this.mq.persist){
+    this.cookie.set(this.mq.uniqueid, this.m[0].style.left + ':' + this.m[1].style.left + ':' + this.mq.direction);
+   }
+   setTimeout(function(){cObj.runit();}, 30 + (this.mq.addDelay || 0));
   }
-  if(this.mq.mouse != 'cursor driven')
-   this.mq.inc = Math.max(1, this.mq.inc);
-  if(d * parseInt(this.m[0].style.left) >= this.w)
-   this.m[0].style.left = parseInt(this.m[1].style.left) - d * this.w + 'px';
-  if(d * parseInt(this.m[1].style.left) >= this.w)
-   this.m[1].style.left = parseInt(this.m[0].style.left) - d * this.w + 'px';
-  this.m[0].style.left = parseInt(this.m[0].style.left) + d * this.mq.inc + 'px';
-  this.m[1].style.left = parseInt(this.m[1].style.left) + d * this.mq.inc + 'px';
-  if(window.opera && this.mq.persist){
-   this.cookie.set(this.mq.uniqueid, this.m[0].style.left + ':' + this.m[1].style.left + ':' + this.mq.direction);
-  }
-  setTimeout(function(){cObj.runit();}, 30 + (this.mq.addDelay || 0));
- }
 
  Marq.prototype.cookie = {
   set: function(n, v, d){ // cook.set takes (name, value, optional_persist_days) - defaults to session if no days specified

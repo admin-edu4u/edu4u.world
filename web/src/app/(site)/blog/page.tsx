@@ -38,7 +38,7 @@ export default async function BlogPage() {
         }
         .scrollable-tabs::-webkit-scrollbar { display: none; }
         @media (max-width: 767px) {
-          .carousel-inner { height: 520px; }
+          .carousel-inner { height: 360px; }
           .blog-carousel-header { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
           .blog-carousel-sub-header { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         }

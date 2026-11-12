@@ -2,10 +2,12 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { createPublicClient } from "@/lib/supabase/server";
 import { SiteHeader } from "@/components/SiteHeader";
+import { HeroBanner } from "@/components/HeroBanner";
 import { HomeEffects } from "@/components/HomeEffects";
 import { HomePopups } from "@/components/HomePopups";
 import { STATUS } from "@/lib/admin/status";
 import { mediaUrl } from "@/lib/admin/media";
+import { getHeroBannerSlides } from "@/lib/heroBannerSlides";
 import { getDictionary, translate } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/locale";
 import { pickLocalizedFields } from "@/lib/i18n/cms";
@@ -36,78 +38,74 @@ const TESTIMONIALS = [
     name: "Tan Wei Jie",
     field: "Information Technology",
     quote:
-      "Edu4U's Information Technology listings are comprehensive. The platform's simplicity and quick application process made my academic journey hassle-free.",
+      "I found a course that actually matched what I wanted to study. Applying took minutes, and the counsellor answered every question I had.",
   },
   {
     img: `${CDN}/images/assets/review-img-2.png`,
     name: "Nurul Hidayah",
     field: "Hospitality Management",
     quote:
-      "Edu4U's extensive courses and scholarships in Hospitality Management made my choice clear. The straightforward application process was the cherry on top.",
+      "I was overwhelmed by choices until I used Edu4u. The scholarship I found covered most of my fees, and the application was straightforward.",
   },
   {
     img: `${CDN}/images/assets/review-img-3.png`,
     name: "Kavi Sharma",
     field: "Marketing",
     quote:
-      "Edu4U's Marketing course options are exceptional. The platform's seamless navigation and quick application process made my educational journey enjoyable.",
+      "Comparing courses side by side saved me weeks of research. I ended up at a university I hadn't even considered before signing up.",
   },
   {
     img: `${CDN}/images/assets/review-img-4.png`,
     name: "Aisha Tan",
     field: "Business Administration",
     quote:
-      "Edu4U guided me to the perfect Business Administration course in Malaysia. The platform's simplicity made my application process stress-free.",
+      "The campus visit I booked through Edu4u settled my doubts. I knew it was the right place the moment I stepped on campus.",
   },
   {
     img: `${CDN}/images/assets/review-img-5.png`,
     name: "Raj Kumar",
     field: "Computer Science",
     quote:
-      "Discovering Edu4U was a game-changer for my Computer Science journey. The diverse course options and easy application process made it an ideal choice.",
+      "As a working adult, I needed a programme that fit my schedule. Edu4u showed me part-time options I didn't know existed.",
   },
   {
     img: `${CDN}/images/assets/review-img-6.png`,
     name: "Mei Ling Wong",
     field: "Environmental Science",
     quote:
-      "Edu4U's user-friendly interface and extensive scholarships helped me find the ideal Environmental Science program in Malaysia. Highly recommended!",
+      "The scholarship matching saved me thousands. The whole process from browsing to applying felt designed for students who are juggling everything.",
   },
   {
     img: `${CDN}/images/assets/review-img-7.png`,
     name: "Amirul bin Hassan",
     field: "Mechanical Engineering",
     quote:
-      "Edu4U streamlined my search for Mechanical Engineering courses. The platform's simplicity and wealth of information made my decision-making easy.",
+      "My counsellor explained entry requirements I hadn't understood and steered me away from a course I was set on. I'm glad I listened.",
   },
   {
     img: `${CDN}/images/assets/review-img-8.png`,
     name: "Priya Patel",
     field: "Psychology",
     quote:
-      "Edu4U's platform made my Psychology course search seamless. The diverse scholarship opportunities and straightforward application process were a lifesaver.",
+      "I'd spent months on and off searching for the right course. Edu4u cut that down to a week, and the scholarship I got was a genuine surprise.",
   },
   {
     img: `${CDN}/images/assets/review-img-9.png`,
     name: "Ahmad Ibrahim",
     field: "Architecture",
     quote:
-      "Edu4U's architecture course listings are unparalleled. The ease of finding, applying, and securing scholarships made it my go-to platform for higher education.",
+      "The portfolio and entry requirements for architecture are a maze. Edu4u laid them out clearly, and I applied with confidence.",
   },
   {
     img: `${CDN}/images/assets/review-img.png`,
     name: "Sara Abdullah",
     field: "Biotechnology",
     quote:
-      "Edu4U's commitment to students shines through. I found the perfect Biotechnology course with ease, thanks to the platform's intuitive design.",
+      "I told the platform what I was interested in and it gave me options that made sense. No more guessing which university to apply to.",
   },
 ];
 
-const ArrowRight = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="23" viewBox="0 0 40 23" fill="none">
-    <path d="M2 10.2686C1.17157 10.2686 0.5 10.9401 0.5 11.7686C0.5 12.597 1.17157 13.2686 2 13.2686V10.2686ZM39.0607 12.8292C39.6465 12.2434 39.6465 11.2937 39.0607 10.7079L29.5147 1.16195C28.9289 0.576166 27.9792 0.576166 27.3934 1.16195C26.8076 1.74774 26.8076 2.69749 27.3934 3.28327L35.8787 11.7686L27.3934 20.2538C26.8076 20.8396 26.8076 21.7894 27.3934 22.3752C27.9792 22.9609 28.9289 22.9609 29.5147 22.3752L39.0607 12.8292ZM2 13.2686H38V10.2686H2V13.2686Z" fill="#CCCCCC"/>
-  </svg>
-);
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
 function blogExcerpt(html: string | null | undefined) {
   if (!html) return "";
@@ -127,8 +125,7 @@ async function HomeContent() {
   const t = (key: string) => translate(dict, key);
 
   const supabase = createPublicClient();
-  const [{ data: home }, { data: blogs }, { data: popups }, settings] = await Promise.all([
-    supabase.from("home").select("*").eq("h_id", 1).maybeSingle(),
+  const [{ data: blogs }, { data: popups }, settings] = await Promise.all([
     supabase
       .from("blogs")
       .select("b_id,b_url_code,b_title,b_img,b_content,i18n")
@@ -143,14 +140,6 @@ async function HomeContent() {
     getSiteSettings(),
   ]);
 
-  const heroFiles = (home?.h_img || "")
-    .split(",")
-    .map((s: string) => s.trim())
-    .filter(Boolean);
-  const heroImages = heroFiles.length
-    ? heroFiles.map((f: string) => `${CDN}/images/home/${f}`)
-    : [`${CDN}/images/assets/home-1.png`];
-  const heroSrc = heroImages[0];
   const popupItems = (popups || [])
     .filter((p) => p.pu_img && p.pu_url)
     .map((p) => ({
@@ -158,74 +147,47 @@ async function HomeContent() {
       img: mediaUrl("home", p.pu_img),
       url: String(p.pu_url),
     }));
+  const heroSlides = await getHeroBannerSlides();
 
   return (
     <>
-      <HomeEffects images={heroImages} />
+      <HomeEffects images={[`${CDN}/images/assets/home-1.png`]} />
       <HomePopups items={popupItems} />
-      {/* ===== Hero section ===== */}
-      <div className="position-relative">
-        <div className="image-container">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            id="rotatingImage"
-            className="w-100"
-            style={{ height: 640, objectFit: "cover", transition: "opacity 1s" }}
-            src={heroSrc}
-            alt="Edu4u"
-          />
-          <div className="overlay" />
-        </div>
+      {/* ===== Hero banner carousel (below the fixed header) ===== */}
+      <HeroBanner slides={heroSlides} />
 
-        <div className="mw-1024 position-absolute" style={{ top: 150, left: 0, right: 0, marginLeft: "auto", marginRight: "auto", zIndex: 1 }}>
-          <div className="d-flex align-items-center mb-10">
-            <div className="col-6">
-              <span className="home-title-1 d-block">{t("homeTitle1")}</span>
-              <span className="home-title-2 d-block pt-6 pb-6">
-                {t("homeSubTitle1")}
-              </span>
-              <span className="home-personality cursor" id="pathway" role="button" tabIndex={0}>
-                {t("startPathway360")}
-              </span>
-            </div>
-            <div className="col-6 d-flex justify-content-end">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${CDN}/images/assets/ubie_sitting_down_with_arrow.png`} style={{ height: 307 }} alt="Ubie mascot" />
-            </div>
+      {/* Category marquee bar */}
+      <div className="home-marquee-wrap">
+        <div className="home-marquee-fade home-marquee-fade--left" aria-hidden />
+        <div className="marquee" id="mycrawler">
+          <div className="d-flex">
+            {MARQUEE_KEYS.map((item) => {
+              const label = t(item.key);
+              return (
+                <div className="d-flex ms-10" key={item.key}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.img} alt={label} width={24} height={25} />
+                  <span className="home-cat-text ms-3">{label}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
-
-        {/* Category marquee bar */}
-        <div>
-          <div className="marquee" id="mycrawler">
-            <div className="d-flex">
-              {MARQUEE_KEYS.map((item) => {
-                const label = t(item.key);
-                return (
-                  <div className="d-flex ms-10" key={item.key}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={item.img} alt={label} />
-                    <span className="home-cat-text ms-3">{label}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <div className="home-marquee-fade home-marquee-fade--right" aria-hidden />
       </div>
 
       {/* ===== Stats section ===== */}
       <div className="mw-1024 mx-auto">
-        <div className="d-flex justify-content-between mt-20">
-          <div>
+        <div className="d-flex justify-content-between mt-20 align-items-stretch">
+          <div className="stat-col">
             <span className="home-data-1 d-block text-center">100+</span>
             <span className="home-desc-1">{t("homeUniPartners")}</span>
           </div>
-          <div>
+          <div className="stat-col">
             <span className="home-data-1 d-block text-center">1,260+</span>
             <span className="home-desc-1">{t("homeCourseAvail")}</span>
           </div>
-          <div>
+          <div className="stat-col">
             <span className="home-data-1 d-block text-center">500,000+</span>
             <span className="home-desc-1">{t("homeHappyStudent")}</span>
           </div>
@@ -298,14 +260,14 @@ async function HomeContent() {
           <div className="mw-1024 mx-auto">
             <div className="col-12 m-0 row pt-20 pb-lg-20 align-items-center">
               <div className="col-lg-7 col-12 order-2 order-lg-1 mt-lg-0 mt-20">
-                <span className="d-block text-center text-lg-start home-title-3">
+                <span className="d-block text-center home-title-3">
                   {t("homeCareer")}
                 </span>
-                <span className="d-block text-center text-lg-start home-title-4 pt-7 pb-7">
+                <span className="d-block text-center home-title-4 pt-7 pb-7">
                   {t("homeSubTitle3")}
                 </span>
                 <Link
-                  className="home-btn-get-started-2 btn-desktop-only hovertype2"
+                  className="home-btn-get-started-2 btn-desktop-only hovertype2 mx-auto d-block text-center"
                   href="/careers"
                 >
                   {t("homeBrowseCareer")}
@@ -322,6 +284,8 @@ async function HomeContent() {
                 <img
                   src={`${CDN}/images/assets/girl_light_bulb.png`}
                   alt="Careers"
+                  width={240}
+                  height={251}
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
               </div>
@@ -339,6 +303,8 @@ async function HomeContent() {
               <img
                 src={`${CDN}/images/assets/ubie_lightbulb.png`}
                 alt="Pathway360"
+                width={240}
+                height={221}
               />
             </div>
             <div className="col-lg-7 col-12 mt-lg-0 mt-20 d-flex flex-column justify-content-center">
@@ -370,6 +336,8 @@ async function HomeContent() {
               <img
                 src={`${CDN}/images/assets/girl_group_together.png`}
                 alt="AI Ubie avatars"
+                width={466}
+                height={207}
                 style={{ width: 466, maxWidth: "100%" }}
               />
             </div>
@@ -444,6 +412,8 @@ async function HomeContent() {
                     className="mass-comm-girl-img"
                     src={`${CDN}/images/assets/girl_mass_com_1.png`}
                     alt="Scholarships"
+                    width={324}
+                    height={401}
                   />
                 </div>
                 <div className="enrolment-card-body text-center px-5">
@@ -510,6 +480,8 @@ async function HomeContent() {
           src={`${CDN}/images/assets/home-dialog-img-1.jpg`}
           className="w-100"
           alt="Edu4u app preview"
+          width={8320}
+          height={4080}
         />
       </div>
 
@@ -683,8 +655,8 @@ async function HomeContent() {
 export default function HomePage() {
   return (
     <>
-      {/* Dark photo hero: light chrome while transparent, solid white after scroll */}
-      <SiteHeader overlayHero />
+      {/* White hero banner: header keeps dark chrome in both states */}
+      <SiteHeader />
       <main>
         <Suspense
           fallback={

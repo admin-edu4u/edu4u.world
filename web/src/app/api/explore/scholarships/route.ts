@@ -3,6 +3,7 @@ import { createPublicClient } from "@/lib/supabase/server";
 import { CDN } from "@/lib/cdn";
 import { getLocale } from "@/lib/i18n/locale";
 import { getLocalized } from "@/lib/i18n/cms";
+import { formatMoney } from "@/lib/money";
 
 export async function GET(req: NextRequest) {
   const supabase = createPublicClient();
@@ -82,6 +83,38 @@ export async function GET(req: NextRequest) {
       }
     }
 
+    // Study fields are stored as sub_cats IDs — resolve them to localized
+    // names so card data never shows raw IDs. Unknown IDs are dropped.
+    const { data: subCats } = await supabase
+      .from("sub_cats")
+      .select("sc_id,sc_name,i18n");
+    const fieldMap: Record<number, string> = {};
+    for (const c of subCats || []) {
+      fieldMap[c.sc_id] = getLocalized(c, "sc_name", locale);
+    }
+
+    // Max discount, resolved the same way as the scholarship detail page:
+    // highest active tier percentage, otherwise highest tier amount.
+    const schIds = [...new Set((data || []).map((s) => s.s_id))];
+    const discountMap: Record<number, string> = {};
+    if (schIds.length) {
+      const { data: discounts } = await supabase
+        .from("scholarship_discount")
+        .select("sd_s_id,sd_percentage,sd_amt")
+        .in("sd_s_id", schIds)
+        .eq("sd_status", 1);
+      const tiers: Record<number, { pct: number; amt: number }> = {};
+      for (const d of discounts || []) {
+        const e = (tiers[d.sd_s_id] ??= { pct: 0, amt: 0 });
+        e.pct = Math.max(e.pct, d.sd_percentage || 0);
+        e.amt = Math.max(e.amt, d.sd_amt || 0);
+      }
+      for (const [id, e] of Object.entries(tiers)) {
+        discountMap[Number(id)] =
+          e.pct > 0 ? `${e.pct}%` : e.amt > 0 ? formatMoney(e.amt) : "";
+      }
+    }
+
     let list = (data || []).map((s) => {
       const uni = uniMap[s.s_uni_id];
       const corpName = getLocalized(s, "s_c_name", locale);
@@ -96,8 +129,17 @@ export async function GET(req: NextRequest) {
             ? `${CDN}/images/scholarships/${s.s_c_logo}`
             : "";
 
+      // Resolve to names, drop unknown IDs, and dedupe repeated names
+      // (the old project's sub_cats data contains duplicates).
       const applicable = s.s_study_field
-        ? s.s_study_field.split(",").filter(Boolean).join(", ")
+        ? [
+            ...new Set(
+              s.s_study_field
+                .split(",")
+                .map((f: string) => fieldMap[Number(f.trim())])
+                .filter(Boolean),
+            ),
+          ].join(", ")
         : "";
 
       const requirementMap: Record<string, string> = {
@@ -125,7 +167,7 @@ export async function GET(req: NextRequest) {
         has_all_cat: false,
         has_interview: s.s_has_interview === 1 ? "Yes" : "No",
         requirement: req,
-        max_discount: "?",
+        max_discount: discountMap[s.s_id] || "",
         s_study_field: s.s_study_field || "",
         s_level: s.s_level_id || "",
       };

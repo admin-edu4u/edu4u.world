@@ -25,9 +25,13 @@ export default async function RootLayout({
   return (
     <html lang={htmlLang[locale] ?? "en"} translate="no">
       <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
         />
         <link
           href="/assets/plugins/global/plugins.bundle.css"

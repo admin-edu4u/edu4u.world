@@ -1,3 +1,4 @@
+import { MapPin } from "@phosphor-icons/react/dist/ssr";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createPublicClient } from "@/lib/supabase/server";
@@ -110,7 +111,7 @@ export default async function UniversityPage({ params }: { params: Promise<Param
       {images.length > 0 && (
         <div className="mb-20">
           <img
-            src={`${CDN}/images/university/${images[0]}`}
+            src={`${CDN}/images/university/images/${images[0]}`}
             className="uni-img-slider"
             alt={uni.u_name}
           />
@@ -120,7 +121,7 @@ export default async function UniversityPage({ params }: { params: Promise<Param
                 {images.slice(1).map((img: string, i: number) => (
                   <img
                     key={i}
-                    src={`${CDN}/images/university/${img}`}
+                    src={`${CDN}/images/university/images/${img}`}
                     alt={`${uni.u_name} ${i + 2}`}
                     style={{ width: 120, height: 80, objectFit: "cover", borderRadius: 8, flexShrink: 0 }}
                   />
@@ -139,7 +140,7 @@ export default async function UniversityPage({ params }: { params: Promise<Param
           <div className="col-12 col-lg-3 mb-5 mb-lg-0">
             {uni.u_logo && (
               <img
-                src={`${CDN}/images/university/${uni.u_logo}`}
+                src={`${CDN}/images/university/logo/${uni.u_logo}`}
                 className="uni-logo"
                 alt={uni.u_name}
               />
@@ -180,9 +181,7 @@ export default async function UniversityPage({ params }: { params: Promise<Param
 
             {uni.u_addr && (
               <div className="mt-5 d-flex align-items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ marginTop: 2, flexShrink: 0 }}>
-                  <path d="M8 9C6.343 9 5 7.657 5 6C5 4.343 6.343 3 8 3C9.657 3 11 4.343 11 6C11 7.657 9.657 9 8 9ZM8 1C5.239 1 3 3.239 3 6C3 9.5 8 15 8 15C8 15 13 9.5 13 6C13 3.239 10.761 1 8 1Z" fill="#666" />
-                </svg>
+                <MapPin weight="light" size={24} color="#666" style={{ marginTop: 2, flexShrink: 0 }} />
                 <span className="uni-location">{uni.u_addr}</span>
               </div>
             )}

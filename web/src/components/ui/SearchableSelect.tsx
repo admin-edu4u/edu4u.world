@@ -11,6 +11,7 @@ import {
   type KeyboardEvent,
 } from "react";
 import { createPortal } from "react-dom";
+import { Check } from "@phosphor-icons/react/dist/ssr";
 import "./searchable-select.css";
 
 export type SearchableOption = {
@@ -312,17 +313,7 @@ export function SearchableSelect({
                     >
                       <span className="searchable-select-option-label">{option.label}</span>
                       <span className="searchable-select-check" aria-hidden>
-                        {isSelected ? (
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                            <path
-                              d="M2.75 7.25L5.5 10L11.25 3.75"
-                              stroke="currentColor"
-                              strokeWidth="1.75"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        ) : null}
+                        {isSelected ? <Check size={24} weight="light" /> : null}
                       </span>
                     </button>
                   </li>

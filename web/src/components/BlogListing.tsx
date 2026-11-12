@@ -64,12 +64,14 @@ export function BlogListing({ blogs, categories }: Props) {
           {starredBlogs.map((b, i) => (
             <div key={b.b_id} className={`carousel-item${i === 0 ? " active" : ""}`}>
               <Link href={`/blog-details/${b.b_url_code}`} className="cursor">
-                <div className="col-12 mt-20 row align-items-center">
+                <div className="mt-20 row align-items-center">
                   <div className="col-12 col-lg-6">
                     <img
                       src={`${CDN}/images/blogs/${b.b_img}`}
                       className="carousel-blog-img w-100 h-90"
                       alt={b.b_title}
+                      width={1200}
+                      height={630}
                     />
                   </div>
                   <div className="col-12 col-lg-6">
@@ -127,7 +129,9 @@ export function BlogListing({ blogs, categories }: Props) {
                           className="w-100 h-8 br-8"
                           src={`${CDN}/images/blogs/${b.b_img}`}
                           alt={b.b_title}
-                          style={{ width: "300px", height: "200px", objectFit: "cover" }}
+                          width={1952}
+                          height={1096}
+                          style={{ height: "200px", objectFit: "cover" }}
                         />
                         <div>
                           <span className="blog-recommend-title d-block pt-5">{b.b_title}</span>

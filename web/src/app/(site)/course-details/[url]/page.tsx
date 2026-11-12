@@ -1,3 +1,4 @@
+import { Briefcase, Calendar, Clock, Medal } from "@phosphor-icons/react/dist/ssr";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createPublicClient } from "@/lib/supabase/server";
@@ -83,7 +84,7 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
         .programme-outline { margin-top: 50px; }
         .details-div-border-right { border-right: 1px solid #E4E4E4; }
         .criteria { font-size: 20px; font-weight: 700; color: #1F1F1F; }
-        .options-toggle { font-size: 14px; font-weight: 500; color: #1F1F1F; border-bottom: 2px solid transparent; border-radius: 0; padding-bottom: 8px; }
+        .options-toggle { font-size: 14px; font-weight: 500; color: #1F1F1F; border-bottom: 2px solid transparent; border-radius: 0; padding: 6px 2px 8px; }
         .options-toggle.active { border-bottom-color: #1A124E; color: #1A124E; }
         .do-next-btn-1 { border: 2px solid #1A124E; border-radius: 8px; padding: 12px 24px; background: #1A124E; color: white; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-block; }
         .do-next-btn-1:hover { color: #1A124E; background-color: white; }
@@ -96,17 +97,17 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
         <div className="image-container">
           <div className="mw-1200 mx-auto" style={{ paddingTop: 86 }}>
             <div className="col-12 mx-auto course-outer-div row align-items-start">
-              <div className="col-2 col-lg-2">
+              <div className="col-12 col-lg-2 mb-4 mb-lg-0">
                 {uni?.u_logo && (
                   <img
-                    src={`${CDN}/images/university/${uni.u_logo}`}
+                    src={`${CDN}/images/university/logo/${uni.u_logo}`}
                     className="uni-logo"
                     alt={uni?.u_name}
                   />
                 )}
               </div>
-              <div className="col-10 col-lg-10 mt-2">
-                <div className="ms-3 ms-lg-5">
+              <div className="col-12 col-lg-10 mt-2">
+                <div className="ms-0 ms-lg-5">
                   <div className="d-flex justify-content-between align-items-center flex-wrap gap-2">
                     <span className="d-block visit-campus-text text-start">{course.c_name}</span>
                   </div>
@@ -121,10 +122,7 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
                     {/* Intake */}
                     <div className="col-6 col-lg-3 px-1 mb-3">
                       <div className="course-details-div">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <path d="M3 18C3 12.3435 3 9.5145 4.758 7.758C6.5145 6 9.3435 6 15 6H21C26.6565 6 29.4855 6 31.242 7.758C33 9.5145 33 12.3435 33 18V21C33 26.6565 33 29.4855 31.242 31.242C29.4855 33 26.6565 33 21 33H15C9.3435 33 6.5145 33 4.758 31.242C3 29.4855 3 26.6565 3 21V18Z" stroke="#1F1F1F" strokeWidth="2" />
-                          <path d="M10.5 6V3.75M25.5 6V3.75M3.75 13.5H32.25" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" />
-                        </svg>
+                        <Calendar weight="light" size={24} color="#1F1F1F" />
                         <span className="course-details-course-intake d-block pt-2">{intakeStr}</span>
                         <span className="course-details-course-intake-desc pt-1 d-block">{t("intakeFor")}{year} / {nextYear}</span>
                       </div>
@@ -133,10 +131,7 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
                     {/* Duration */}
                     <div className="col-6 col-lg-3 px-1 mb-3">
                       <div className="course-details-div">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <path d="M4.5 18C4.5 25.456 10.544 31.5 18 31.5C25.456 31.5 31.5 25.456 31.5 18C31.5 10.544 25.456 4.5 18 4.5C10.544 4.5 4.5 10.544 4.5 18Z" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                          <path d="M18 10.5V18L22.5 22.5" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        <Clock weight="light" size={24} color="#1F1F1F" />
                         <span className="course-details-course-intake d-block pt-2">{course.c_duration} {course.c_duration === 1 ? t("yearSingular") : t("years")}</span>
                         <span className="course-details-course-intake-desc pt-1 d-block">{t("durationOfStudies")}</span>
                       </div>
@@ -145,11 +140,7 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
                     {/* Award */}
                     <div className="col-6 col-lg-3 px-1 mb-3">
                       <div className="course-details-div">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <path d="M18 24C23.799 24 28.5 19.299 28.5 13.5C28.5 7.701 23.799 3 18 3C12.201 3 7.5 7.701 7.5 13.5C7.5 19.299 12.201 24 18 24Z" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                          <path d="M18 18C20.485 18 22.5 15.985 22.5 13.5C22.5 11.015 20.485 9 18 9C15.515 9 13.5 11.015 13.5 13.5C13.5 15.985 15.515 18 18 18Z" fill="#1F1F1F" />
-                          <path d="M10.5 21V30.351L18 28.75L25.5 30.351V21" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        <Medal weight="light" size={24} color="#1F1F1F" />
                         <span className="course-details-course-intake d-block pt-2">{course.c_award || "-"}</span>
                         <span className="course-details-course-intake-desc pt-1 d-block">{t("award")}</span>
                       </div>
@@ -158,10 +149,7 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
                     {/* Internship */}
                     <div className="col-6 col-lg-3 px-1 mb-3">
                       <div className="course-details-div">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                          <path d="M12 10.5V7.5C12 6.704 12.316 5.941 12.879 5.379C13.441 4.816 14.204 4.5 15 4.5H21C21.796 4.5 22.559 4.816 23.121 5.379C23.684 5.941 24 6.704 24 7.5V10.5M18 18V18.015M4.5 13.5C4.5 12.704 4.816 11.941 5.379 11.379C5.941 10.816 6.704 10.5 7.5 10.5H28.5C29.296 10.5 30.059 10.816 30.621 11.379C31.184 11.941 31.5 12.704 31.5 13.5V27C31.5 27.796 31.184 28.559 30.621 29.121C30.059 29.684 29.296 30 28.5 30H7.5C6.704 30 5.941 29.684 5.379 29.121C4.816 28.559 4.5 27.796 4.5 27V13.5Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                          <path d="M4.5 19.5C8.687 21.61 13.311 22.709 18 22.709C22.689 22.709 27.313 21.61 31.5 19.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        <Briefcase weight="light" size={24} color="black" />
                         <span className="course-details-course-intake d-block pt-2">
                           {course.c_has_internship
                             ? `${course.c_internship_duration || ""} ${t("monthsWord")}`
@@ -199,13 +187,13 @@ export default async function CourseDetailsPage({ params }: { params: Promise<Pa
                 <div className="mt-15">
                   <ul className="nav nav-pills mt-4 gap-5" id="pills-tab" role="tablist">
                     <li className="nav-item" role="presentation">
-                      <button className="p-0 me-5 nav-link options-toggle active" data-bs-toggle="pill" data-bs-target="#pills-core" type="button">{t("core")}</button>
+                      <button className="me-5 nav-link options-toggle active" data-bs-toggle="pill" data-bs-target="#pills-core" type="button">{t("core")}</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                      <button className="p-0 me-5 nav-link options-toggle" data-bs-toggle="pill" data-bs-target="#pills-elective" type="button">{t("elective")}</button>
+                      <button className="me-5 nav-link options-toggle" data-bs-toggle="pill" data-bs-target="#pills-elective" type="button">{t("elective")}</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                      <button className="p-0 nav-link options-toggle" data-bs-toggle="pill" data-bs-target="#pills-others" type="button">{t("others")}</button>
+                      <button className="nav-link options-toggle" data-bs-toggle="pill" data-bs-target="#pills-others" type="button">{t("others")}</button>
                     </li>
                   </ul>
                   <div className="tab-content mt-5 mb-10" id="pills-tabContent">

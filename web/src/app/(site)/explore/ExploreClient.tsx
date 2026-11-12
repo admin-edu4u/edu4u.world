@@ -1,5 +1,6 @@
 "use client";
 
+import { MagnifyingGlass, MapPin } from "@phosphor-icons/react/dist/ssr";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { CustomDropdown } from "@/components/ui/CustomDropdown";
@@ -44,28 +45,12 @@ function buildQuery(params: Record<string, string | string[]>): string {
 
 // -- Icons --
 function SearchIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M21.0002 21L16.6572 16.657M16.6572 16.657C17.4001 15.9141 17.9894 15.0322 18.3914 14.0615C18.7935 13.0909 19.0004 12.0506 19.0004 11C19.0004 9.94939 18.7935 8.90908 18.3914 7.93845C17.9894 6.96782 17.4001 6.08588 16.6572 5.34299C15.9143 4.6001 15.0324 4.01081 14.0618 3.60877C13.0911 3.20672 12.0508 2.99979 11.0002 2.99979C9.9496 2.99979 8.90929 3.20672 7.93866 3.60877C6.96803 4.01081 6.08609 4.6001 5.34321 5.34299C3.84288 6.84332 3 8.87821 3 11C3 13.1218 3.84288 15.1567 5.34321 16.657C6.84354 18.1573 8.87842 19.0002 11.0002 19.0002C13.122 19.0002 15.1569 18.1573 16.6572 16.657Z"
-        stroke="#999999" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <MagnifyingGlass weight="light" size={24} color="#999999" />;
 }
 
 function LocationIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-      <path
-        d="M8.00001 1.32999C6.54184 1.33171 5.1439 1.91172 4.11282 2.9428C3.08174 3.97388 2.50173 5.37182 2.50001 6.82999C2.49826 8.0216 2.8875 9.18088 3.60801 10.13C3.60801 10.13 3.75801 10.3275 3.78251 10.356L8.00001 15.33L12.2195 10.3535C12.2415 10.327 12.392 10.13 12.392 10.13L12.3925 10.1285C13.1127 9.17979 13.5017 8.02105 13.5 6.82999C13.4983 5.37182 12.9183 3.97388 11.8872 2.9428C10.8561 1.91172 9.45817 1.33171 8.00001 1.32999ZM8.00001 8.82999C7.60444 8.82999 7.21776 8.71269 6.88887 8.49293C6.55997 8.27316 6.30362 7.96081 6.15225 7.59535C6.00087 7.2299 5.96126 6.82777 6.03844 6.43981C6.11561 6.05184 6.30609 5.69548 6.58579 5.41577C6.8655 5.13607 7.22186 4.94559 7.60983 4.86842C7.99779 4.79125 8.39992 4.83085 8.76537 4.98223C9.13082 5.1336 9.44318 5.38995 9.66294 5.71885C9.88271 6.04774 10 6.43442 10 6.82999C9.99934 7.36022 9.78842 7.86854 9.41349 8.24347C9.03856 8.6184 8.53024 8.82933 8.00001 8.82999Z"
-        fill="#999999"
-      />
-    </svg>
-  );
-}
-
-// -- Sub-components --
+  return <MapPin weight="light" size={24} color="#999999" />;
+}// -- Sub-components --
 
 function AccordionSection({
   id, title, open, onToggle, children,
@@ -104,8 +89,7 @@ function CheckboxGroup({
   options: { value: string; label: string }[];
   checked: string[];
   onChange: (vals: string[]) => void;
-}) {
-  return (
+}) {  return (
     <>
       {options.map((opt, i) => (
         <div className="form-check form-check-custom form-check-sm mb-5" key={opt.value}>
@@ -133,10 +117,65 @@ function CheckboxGroup({
   );
 }
 
+// -- Mobile filter pills: horizontal scrollable row, one panel open at a
+//    time; shares the same filter state as the desktop accordion sidebar --
+function MobileFilterBar({
+  sections, onReset, resetLabel,
+}: {
+  sections: {
+    id: string; title: string;
+    options: { value: string; label: string }[];
+    checked: string[];
+    onChange: (vals: string[]) => void;
+  }[];
+  onReset: () => void;
+  resetLabel: string;
+}) {
+  const [openId, setOpenId] = useState<string | null>(null);
+  const open = sections.find((s) => s.id === openId) || null;
+  return (
+    <div className="explore-mobile-filters">
+      <div className="explore-mobile-pills">
+        {sections.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            className={`explore-mobile-pill${openId === s.id ? " active" : ""}`}
+            aria-expanded={openId === s.id}
+            onClick={() => setOpenId(openId === s.id ? null : s.id)}
+          >
+            {s.title}
+            {s.checked.length > 0 && (
+              <span className="explore-pill-count">{s.checked.length}</span>
+            )}
+          </button>
+        ))}
+        <button
+          type="button"
+          className="explore-mobile-pill explore-pill-reset"
+          onClick={onReset}
+        >
+          {resetLabel}
+        </button>
+      </div>
+      {open && (
+        <div className="explore-mobile-panel">
+          <CheckboxGroup
+            name={`m_${open.id}`}
+            options={open.options}
+            checked={open.checked}
+            onChange={open.onChange}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 function UniCard({ item }: { item: UniItem }) {
   const t = useT();
   return (
-    <div className="col-12 col-md-4 mt-5">
+    <div className="col-6 col-md-4 mt-5">
       <a href={`/university/${item.url}`} className="text-decoration-none">
         <div className="col-12 explore-uni-outter">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -173,7 +212,7 @@ function CourseCard({ item }: { item: CourseItem }) {
   const truncated =
     item.name.length > 75 ? item.name.substring(0, 75) + "..." : item.name;
   return (
-    <div className="col-12 col-md-6 mt-5">
+    <div className="col-6 col-md-6 mt-5">
       <a href={`/course-details/${item.url_code}`} className="text-decoration-none">
         <div className="col-12 explore-course-outter">
           <div className="d-flex justify-content-between">
@@ -225,7 +264,7 @@ function CourseCard({ item }: { item: CourseItem }) {
 function ScholarshipCard({ item }: { item: ScholarshipItem }) {
   const t = useT();
   return (
-    <div className="col-12 col-md-6 mt-5">
+    <div className="col-6 col-md-6 mt-5">
       <a href={`/scholarship/${item.url_code}`} className="text-decoration-none">
         <div className="col-12 explore-course-outter">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -256,9 +295,11 @@ function ScholarshipCard({ item }: { item: ScholarshipItem }) {
               </div>
             </div>
             <div className="separator my-5"></div>
-            <span className="uni-total d-block text-end">
-              {t("feesWaiver")}<span className="ttl-amt"> {item.max_discount}</span>
-            </span>
+            {item.max_discount && (
+              <span className="uni-total d-block text-end">
+                {t("feesWaiver")}<span className="ttl-amt"> {item.max_discount}</span>
+              </span>
+            )}
             <button className="w-100 mt-10 apply-scholarship-btn">
               {t("pathway360")} - {t("applicable")}
             </button>
@@ -282,10 +323,12 @@ function EmptyState({ msg }: { msg: string }) {
 export default function ExploreClient({
   initialTab,
   studyFields,
+  scholarshipFields,
   states,
 }: {
   initialTab: string;
   studyFields: StudyField[];
+  scholarshipFields: StudyField[];
   states: StateOption[];
 }) {
   const t = useT();
@@ -604,7 +647,18 @@ export default function ExploreClient({
             {/* Results */}
             <div className="col-12 col-lg-9">
               <div className="ms-lg-10">
-                <div className="col-12 row mx-auto">
+                <MobileFilterBar
+                  onReset={resetUniFilters}
+                  resetLabel={t("resetFilter")}
+                  sections={[
+                    { id: "uni_field", title: t("fieldOfStudy"), options: studyFieldOpts, checked: uniStudyField, onChange: setUniStudyField },
+                    { id: "uni_level", title: t("level"), options: levelOptions, checked: uniLevel, onChange: setUniLevel },
+                    { id: "uni_scholarship", title: t("scholarships"), options: scholarshipRanges, checked: uniScholarship, onChange: setUniScholarship },
+                    { id: "uni_country", title: t("country"), options: countryOptions, checked: uniCountry, onChange: setUniCountry },
+                    { id: "uni_state", title: t("state"), options: stateOpts, checked: uniState, onChange: setUniState },
+                  ]}
+                />
+                <div className="col-12 row mx-auto explore-toolbar">
                   <div className="filter-width">
                     <div className="input-group input-group-solid explore-search-group col-6">
                       <span className="input-group-text explore-search-icon" id="uni-search-icon">
@@ -767,7 +821,21 @@ export default function ExploreClient({
             {/* Results */}
             <div className="col-12 col-lg-9">
               <div className="ms-lg-10">
-                <div className="col-12 row mx-auto">
+                <MobileFilterBar
+                  onReset={resetCourseFilters}
+                  resetLabel={t("resetFilter")}
+                  sections={[
+                    { id: "c_field", title: t("fieldOfStudy"), options: studyFieldOpts, checked: courseStudyField, onChange: setCourseStudyField },
+                    { id: "c_level", title: t("level"), options: levelOptions, checked: courseLevel, onChange: setCourseLevel },
+                    { id: "c_scholarship", title: t("scholarships"), options: scholarshipRanges, checked: courseScholarship, onChange: setCourseScholarship },
+                    { id: "c_fee", title: t("feeBudget"), options: feeRanges, checked: courseFee, onChange: setCourseFee },
+                    { id: "c_duration", title: t("fullTimeDuration"), options: durationOptions, checked: courseDuration, onChange: setCourseDuration },
+                    { id: "c_month", title: t("intakeMonth"), options: monthOptions, checked: courseMonth, onChange: setCourseMonth },
+                    { id: "c_country", title: t("country"), options: countryOptions, checked: courseCountry, onChange: setCourseCountry },
+                    { id: "c_state", title: t("state"), options: stateOpts, checked: courseState, onChange: setCourseState },
+                  ]}
+                />
+                <div className="col-12 row mx-auto explore-toolbar">
                   <div className="filter-width">
                     <div className="input-group input-group-solid explore-search-group col-6">
                       <span className="input-group-text explore-search-icon" id="course-search-icon">
@@ -863,7 +931,7 @@ export default function ExploreClient({
                       open={!!openAcc["s_field"]} onToggle={() => toggle("s_field")}
                     >
                       <CheckboxGroup
-                        name="scholarship_study_field" options={studyFieldOpts}
+                        name="scholarship_study_field" options={scholarshipFields.map((sf) => ({ value: String(sf.c_id), label: sf.c_name }))}
                         checked={schStudyField} onChange={setSchStudyField}
                       />
                     </AccordionSection>
@@ -889,7 +957,17 @@ export default function ExploreClient({
             {/* Results */}
             <div className="col-12 col-lg-9">
               <div className="ms-lg-10">
-                <div className="col-12 row mx-auto">
+                <MobileFilterBar
+                  onReset={resetSchFilters}
+                  resetLabel={t("resetFilter")}
+                  sections={[
+                    { id: "s_field", title: t("fieldOfStudy"), options: scholarshipFields.map((sf) => ({ value: String(sf.c_id), label: sf.c_name })), checked: schStudyField, onChange: setSchStudyField },
+                    { id: "s_level", title: t("level"), options: levelOptions, checked: schLevel, onChange: setSchLevel },
+                    { id: "s_country", title: t("country"), options: countryOptions, checked: schCountry, onChange: setSchCountry },
+                    { id: "s_state", title: t("state"), options: stateOpts, checked: schState, onChange: setSchState },
+                  ]}
+                />
+                <div className="col-12 row mx-auto explore-toolbar">
                   <div className="filter-width">
                     <div className="input-group input-group-solid explore-search-group col-6">
                       <span className="input-group-text explore-search-icon" id="sch-search-icon">

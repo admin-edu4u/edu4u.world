@@ -43,8 +43,8 @@ export default async function CareersPage() {
           margin: 0 auto;
         }
         @media screen and (max-width: 767px) {
-          img.w-100 { height: 460px; }
-          .event-title-2, .event-title-3 { width: 340px; margin: 0 auto; }
+          img.w-100 { height: 320px; object-fit: cover; }
+          .event-title-2, .event-title-3 { width: 340px; max-width: calc(100vw - 40px); margin: 0 auto; }
           .mobile-font-size { font-size: 14px; }
         }
         .scrollable-tabs {

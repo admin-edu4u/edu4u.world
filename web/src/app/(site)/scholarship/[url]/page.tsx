@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation";
+import { Medal, MapPin, GraduationCap, BookOpen } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { createPublicClient } from "@/lib/supabase/server";
 import { CDN } from "@/lib/cdn";
 import { getLocale } from "@/lib/i18n/locale";
@@ -72,7 +73,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
       ? `${CDN}/images/corporate/${scholarship.s_c_logo}`
       : null
     : uni?.u_logo
-    ? `${CDN}/images/university/${uni.u_logo}`
+    ? `${CDN}/images/university/logo/${uni.u_logo}`
     : null;
 
   const entityName = scholarship.s_is_corporate
@@ -104,8 +105,8 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
         .submission-user-label { font-size: 13px; color: #999; }
         .course-details { font-size: 14px; color: #1F1F1F; }
         .criteria { font-size: 20px; font-weight: 700; color: #1F1F1F; }
-        .table-header { font-size: 13px; font-weight: 600; color: #999; padding-bottom: 8px; border-bottom: 1px solid #E4E4E4; }
-        .table-body { font-size: 14px; color: #1F1F1F; padding: 8px 0; border-bottom: 1px solid #E4E4E4; vertical-align: top; }
+        .table-header { font-size: 13px; font-weight: 600; color: #999; padding-bottom: 8px; border-bottom: 1px solid #E4E4E4; overflow-wrap: anywhere; }
+        .table-body { font-size: 14px; color: #1F1F1F; padding: 8px 0; border-bottom: 1px solid #E4E4E4; vertical-align: top; overflow-wrap: anywhere; }
         .uni-name-1 { font-size: 22px; font-weight: 700; color: #1F1F1F; }
         .review-desc { font-size: 15px; color: #666; }
         .uni-logo { width: 80px; height: 80px; object-fit: contain; border-radius: 8px; border: 1px solid #E4E4E4; }
@@ -114,7 +115,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
       `}</style>
 
       <div className="row">
-        <div className="col-2">
+        <div className="col-12 col-lg-2 mb-4 mb-lg-0">
           {logo ? (
             <img src={logo} className="uni-logo" alt={entityName} />
           ) : (
@@ -124,8 +125,8 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
           )}
         </div>
 
-        <div className="col-10 mt-5">
-          <div className="ms-5">
+        <div className="col-12 col-lg-10 mt-2">
+          <div className="ms-0 ms-lg-5">
             <div className="col-12 d-flex justify-content-between flex-wrap gap-2">
               <span className="uni-name-1">{scholarship.s_title}</span>
             </div>
@@ -134,11 +135,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
             {/* Max award */}
             {maxDiscount && (
               <div className="d-flex align-items-center mt-5 gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                  <path d="M18 24C23.799 24 28.5 19.299 28.5 13.5C28.5 7.701 23.799 3 18 3C12.201 3 7.5 7.701 7.5 13.5C7.5 19.299 12.201 24 18 24Z" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M18 18C20.485 18 22.5 15.985 22.5 13.5C22.5 11.015 20.485 9 18 9C15.515 9 13.5 11.015 13.5 13.5C13.5 15.985 15.515 18 18 18Z" fill="#1F1F1F" />
-                  <path d="M10.5 21V30.351L18 28.75L25.5 30.351V21" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Medal weight="light" size={24} color="#1F1F1F" />
                 <span className="award-text">{t("awardsUpTo")}</span>
                 <span className="award-amt">{maxDiscount}</span>
               </div>
@@ -147,9 +144,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
             {/* Location */}
             {entityName && (
               <div className="col-12 mt-8 d-flex align-items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 9C6.343 9 5 7.657 5 6C5 4.343 6.343 3 8 3C9.657 3 11 4.343 11 6C11 7.657 9.657 9 8 9ZM8 1C5.239 1 3 3.239 3 6C3 9.5 8 15 8 15C8 15 13 9.5 13 6C13 3.239 10.761 1 8 1Z" fill="#999999" />
-                </svg>
+                <MapPin weight="light" size={24} color="#999999" />
                 <span className="submission-user-label">{t("locationLabel")}:</span>
                 <span className="course-details">{entityName}</span>
               </div>
@@ -158,9 +153,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
             {/* Level */}
             {levelIds.length > 0 && (
               <div className="col-12 mt-3 d-flex align-items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M14.25 9.25V6L8 2.75L1.75 6L8 9.25L11.25 7.75V11.25C11.25 12.25 9.75 13.25 8 13.25C6.25 13.25 4.75 12.25 4.75 11.25V7.75" stroke="#999999" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <GraduationCap weight="light" size={24} color="#999999" />
                 <span className="submission-user-label">{t("courseLevel")}:</span>
                 <span className="course-details">
                   {levelIds.map((id) => levelMap[id] || id).join(", ")}
@@ -171,9 +164,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<Para
             {/* Field of study */}
             {scholarship.s_study_field && (
               <div className="col-12 mt-3 d-flex align-items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M1 3h14v10H1z" stroke="#999999" strokeLinejoin="round" />
-                </svg>
+                <BookOpen weight="light" size={24} color="#999999" />
                 <span className="submission-user-label">{t("fieldOfStudy")}:</span>
                 <span className="course-details">{scholarship.s_study_field}</span>
               </div>

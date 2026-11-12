@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, X } from "@phosphor-icons/react/dist/ssr";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,6 +10,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { isValidEmail } from "@/lib/email";
 import { signupPasswordErrorKey } from "@/lib/password";
 import { PasswordInput } from "@/components/ui/PasswordInput";
+import { ACCOUNT_ROUTES } from "@/lib/member/accountSections";
 
 type ModalKind = "login" | "signup" | "pathway" | "language" | null;
 
@@ -19,22 +21,15 @@ const LANG_OPTIONS: { locale: Locale; label: string; native: string }[] = [
 ];
 
 const CloseSvg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-    <path d="M1 1L9 9" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M9 1L1 9" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
+  <X weight="light" size={24} color="white" />
 );
 
 const CheckSvg = () => (
-  <svg className="me-2" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 4.81818L3.13333 7L9 1" stroke="#1A124E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
+  <Check weight="light" size={24} color="#1A124E" className="me-2" />
 );
 
 const LangCheckSvg = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-    <path d="M3.5 9.25L7 12.75L14.5 5.25" stroke="#1A124E" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
+  <Check weight="light" size={24} color="#1A124E" aria-hidden />
 );
 
 function isActionTarget(el: Element | null, id: string) {
@@ -68,10 +63,24 @@ export function SiteModals() {
 
   useEffect(() => {
     if (!mounted) return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("login") === "1" && !member) {
+      setModal("login");
+      router.replace("/", { scroll: false });
+    }
+  }, [mounted, member, router]);
+
+  useEffect(() => {
+    if (!mounted) return;
     const onOpenModal = (e: Event) => {
       const detail = (e as CustomEvent<{ kind?: ModalKind; modal?: ModalKind }>).detail;
       const kind = detail?.kind ?? detail?.modal ?? null;
-      if (kind === "login" || kind === "signup" || kind === "pathway" || kind === "language") {
+      if (
+        kind === "login" ||
+        kind === "signup" ||
+        kind === "pathway" ||
+        kind === "language"
+      ) {
         setDrawerOpen(false);
         setModal(kind);
       }
@@ -129,7 +138,7 @@ export function SiteModals() {
       document.removeEventListener("click", onClick);
       window.removeEventListener("keydown", onKey);
     };
-  }, [mounted, modal, drawerOpen, closeModal]);
+  }, [mounted, modal, drawerOpen, closeModal, member]);
 
   useEffect(() => {
     if (modal || drawerOpen) {
@@ -515,10 +524,7 @@ export function SiteModals() {
             </div>
           </div>
           <button type="button" className="modal-close-btn cursor" onClick={closeModal} aria-label="Close">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L13 13" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-              <path d="M13 1L0.999999 13" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
+            <X weight="light" size={24} color="white" />
           </button>
         </div>
       </div>
@@ -607,15 +613,12 @@ export function SiteModals() {
             <div className="d-flex justify-content-between">
               <div className="text-start mt-6" />
               <div className="text-end mt-9 me-8" data-kt-drawer-dismiss="true" role="button" tabIndex={0}>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" data-kt-drawer-dismiss="true">
-                  <path d="M1 1L13 13" stroke="#9C9C9C" strokeLinecap="round" />
-                  <path d="M13 1L0.999999 13" stroke="#9C9C9C" strokeLinecap="round" />
-                </svg>
+                <X weight="light" size={24} color="#9C9C9C" data-kt-drawer-dismiss="true" />
               </div>
             </div>
-            <div className="col-11 mt-5 mx-auto text-center row">
+            <div className="col-11 mt-5 mx-auto text-center row pb-10">
               <a
-                className="mobile-sidebar-option mt-10 text-start cursor exploreaccordion accordion-button collapsed"
+                className="mobile-sidebar-option mt-5 text-start cursor exploreaccordion accordion-button collapsed"
                 style={{ fontWeight: 500 }}
                 onClick={() => setExploreOpen((v) => !v)}
                 role="button"
@@ -629,7 +632,7 @@ export function SiteModals() {
                   <Link href="/explore?tab=course" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("courses")}</Link>
                   <Link href="/compare-course" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("compareCourse")}</Link>
                   <Link href="/explore?tab=scholarship" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("scholarships")}</Link>
-                  <Link href="/visit-campus" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("campusVisit")}</Link>
+                  <Link href="/visit-campus" className="explore-tab d-block" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("campusVisit")}</Link>
                 </div>
               )}
 
@@ -646,6 +649,27 @@ export function SiteModals() {
                     <p className="mb-3" style={{ fontSize: 14, color: "#666" }}>
                       {member.email}
                     </p>
+                    <Link
+                      className="sidebar-login d-block text-center w-100 mb-2"
+                      href={ACCOUNT_ROUTES.account}
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      {t("myAccount")}
+                    </Link>
+                    <Link
+                      className="sidebar-login d-block text-center w-100 mb-2"
+                      href={ACCOUNT_ROUTES["student-profile"]}
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      {t("studentProfile")}
+                    </Link>
+                    <Link
+                      className="sidebar-login d-block text-center w-100 mb-3"
+                      href={ACCOUNT_ROUTES.documents}
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      {t("myDocument")}
+                    </Link>
                     <button type="button" className="sidebar-login d-block text-center w-100" onClick={onLogout}>
                       {t("logOut")}
                     </button>
@@ -664,19 +688,7 @@ export function SiteModals() {
               <div className="col-12">
                 <Link className="d-block w-100 sidebar-apply-now mt-5" href="/explore/?tab=course" onClick={() => setDrawerOpen(false)}>{t("applyNowUncap")}</Link>
               </div>
-              <div className="col-12 mt-10 mb-10">
-                <button
-                  type="button"
-                  className="mobile-sidebar-option w-100 text-start border-0 bg-transparent cursor"
-                  style={{ fontWeight: 500 }}
-                  onClick={() => {
-                    setDrawerOpen(false);
-                    setModal("language");
-                  }}
-                >
-                  {t("selectLanguage")}
-                </button>
-              </div>
+              {/* Language selector lives in the header next to the hamburger (globe icon) */}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import "./custom-dropdown.css";
 
 export type CustomDropdownOption = {
@@ -66,22 +67,11 @@ export function CustomDropdown({
         onClick={() => setOpen((v) => !v)}
       >
         <span className="custom-dropdown-label">{label}</span>
-        <svg
-          className="custom-dropdown-chevron"
-          width="12"
-          height="8"
-          viewBox="0 0 12 8"
-          fill="none"
+        <CaretDown size={24}
+          className={`custom-dropdown-chevron${open ? " is-open" : ""}`}
+          weight="light"
           aria-hidden
-        >
-          <path
-            d="M1 1.5L6 6.5L11 1.5"
-            stroke="#999999"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        />
       </button>
       {open ? (
         <ul className="custom-dropdown-menu" id={listId} role="listbox">
