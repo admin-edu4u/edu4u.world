@@ -18,14 +18,13 @@ function authenticateAdminFromEnv(
   password: string,
 ): { ok: true; user: AdminUserRow } | { ok: false; error: string } | null {
   const expected = process.env.ADMIN_USERNAME?.trim();
-  const storedHash = process.env.ADMIN_PASSWORD_HASH?.trim();
-  if (!expected || !storedHash) return null;
+  const salt = process.env.ADMIN_PASSWORD_SALT?.trim();
+  const hash = process.env.ADMIN_PASSWORD_HASH?.trim();
+  if (!expected || !salt || !hash) return null;
   if (username.trim() !== expected) {
     return { ok: false, error: "Invalid credentials" };
   }
-  if (!isModernPasswordHash(storedHash)) {
-    return { ok: false, error: "Admin login is not configured" };
-  }
+  const storedHash = `scrypt$${salt}$${hash}`;
   if (!verifyPassword(password, storedHash)) {
     return { ok: false, error: "Invalid credentials" };
   }

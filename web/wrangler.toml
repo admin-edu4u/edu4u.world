@@ -17,7 +17,17 @@ service = "edu4u"
 [images]
 binding = "IMAGES"
 
+[[routes]]
+pattern = "edu4u.world"
+custom_domain = true
+zone_id = "16fcc5c8b5ec83e2fed4a5c1c1cf5322"
+
+[[routes]]
+pattern = "www.edu4u.world"
+custom_domain = true
+zone_id = "16fcc5c8b5ec83e2fed4a5c1c1cf5322"
+
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://edu4u.world"
 NEXT_PUBLIC_SUPABASE_URL = "https://fmlkrtshkvgatzpnymlo.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZtbGtydHNoa3ZnYXR6cG55bWxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMyOTY0NDAsImV4cCI6MjEwODg3MjQ0MH0.RuaiF725L8JMvnvw-z8PshievoBbuhDZZaUc9WX13iw"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_ng-cubje62W4tzTvkPwQJg_1rs4iceK"

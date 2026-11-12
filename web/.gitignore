@@ -44,3 +44,7 @@ next-env.d.ts
 .env*.local
 .open-next
 .wrangler
+
+# local-only secrets
+.dev.vars
+start-dev.sh

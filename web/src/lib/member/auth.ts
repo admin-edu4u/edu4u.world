@@ -1,5 +1,9 @@
 import { createServiceClient } from "@/lib/supabase/server";
-import { isModernPasswordHash, verifyPassword } from "@/lib/passwordHash";
+import { isModernPasswordHash } from "@/lib/passwordHash";
+import {
+  upgradeMemberPasswordToScrypt,
+  verifyMemberPassword,
+} from "@/lib/member/memberPassword";
 
 export type MemberUserRow = {
   id: number;
@@ -43,11 +47,12 @@ export async function authenticateMember(
     return { ok: false, msg: "accountInactive" };
   }
 
-  if (!isModernPasswordHash(data.password)) {
-    return { ok: false, msg: "legacyPasswordResetRequired" };
-  }
-  if (!verifyPassword(password, data.password)) {
+  if (!verifyMemberPassword(password, data.password)) {
     return { ok: false, msg: "invalidCredentials" };
+  }
+
+  if (!isModernPasswordHash(data.password)) {
+    await upgradeMemberPasswordToScrypt(supabase, data.id, password);
   }
 
   return { ok: true, user: data as MemberUserRow };
