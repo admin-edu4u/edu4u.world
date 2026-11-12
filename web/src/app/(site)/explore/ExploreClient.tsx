@@ -175,7 +175,7 @@ function MobileFilterBar({
 function UniCard({ item }: { item: UniItem }) {
   const t = useT();
   return (
-    <div className="col-6 col-md-4 mt-5">
+    <div className="col-6 mt-5">
       <a href={`/university/${item.url}`} className="text-decoration-none">
         <div className="col-12 explore-uni-outter">
           {/* eslint-disable-next-line @next/next/no-img-element */}
