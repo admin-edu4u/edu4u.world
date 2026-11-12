@@ -41,6 +41,7 @@ const SECTIONS: NavSection[] = [
   {
     title: "Home",
     items: [
+      { href: "/admin/hero", label: "Hero banners", icon: Image },
       { href: "/admin/popup", label: "Pop up", icon: Sparkles },
       { href: "/admin/home", label: "Background", icon: Image },
     ],
