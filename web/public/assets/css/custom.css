@@ -1133,13 +1133,14 @@ input[type=number] {
   line-height: normal;
 }
 
-/* Scholarship card "Applicable for" list: cap at 2 rows with ellipsis */
+/* Scholarship card "Applicable for" list: cap at 2 rows with ellipsis.
+   !important needed to beat the theme's .d-block { display: block !important } */
 #applicable {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
 }
 
 .course-uni-img {
