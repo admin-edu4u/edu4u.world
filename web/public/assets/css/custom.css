@@ -1131,6 +1131,15 @@ input[type=number] {
   line-height: normal;
 }
 
+/* Scholarship card "Applicable for" list: cap at 2 rows with ellipsis */
+#applicable {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .course-uni-img {
   width: 48px;
   height: 48px;

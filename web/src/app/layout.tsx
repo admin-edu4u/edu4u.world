@@ -39,7 +39,7 @@ export default async function RootLayout({
           type="text/css"
         />
         <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/custom.css?v=20261030d" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/custom.css?v=20261112a" rel="stylesheet" type="text/css" />
         <link
           href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
           rel="stylesheet"
