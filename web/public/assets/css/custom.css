@@ -1081,11 +1081,27 @@ input[type=number] {
 }
 
 .explore-sort-wrap {
-  width: 20%;
+  width: 28%;
 }
 
 .explore-sort {
   width: 100%;
+}
+
+/* Desktop: let the sort menu grow to its longest option instead of
+   wrapping text, anchored to the trigger's right edge so it grows
+   leftwards and never overflows the viewport */
+@media (min-width: 768px) {
+  .explore-sort .custom-dropdown-menu {
+    left: auto;
+    right: 0;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .explore-sort .custom-dropdown-option {
+    white-space: nowrap;
+  }
 }
 
 .explore-uni-outter {
