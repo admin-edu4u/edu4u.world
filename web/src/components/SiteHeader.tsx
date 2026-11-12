@@ -26,8 +26,9 @@ export function SiteHeader() {
   const { careersHidden } = useSiteFlags();
 
   const exploreItems = [
-    { href: "/explore?tab=university", title: t("uni") },
-    { href: "/explore?tab=course", title: t("courses") },
+    { href: "/explore/university", title: t("uni") },
+    { href: "/explore/course", title: t("courses") },
+    { href: "/explore/scholarship", title: t("scholarships") },
     { href: "/compare-course", title: t("compareCourse") },
     { href: "/visit-campus", title: t("campusVisit") },
   ];

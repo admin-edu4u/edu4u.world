@@ -45,13 +45,13 @@ export function SiteFooter() {
             <span className="footer-title">{t("products")}</span>
             <div className="mt-5">
               <span className="footer-sub-title d-block pt-5">
-                <Link href="/explore?tab=university" style={{ color: "white" }}>{t("uni")}</Link>
+                <Link href="/explore/university" style={{ color: "white" }}>{t("uni")}</Link>
               </span>
               <span className="footer-sub-title d-block pt-5">
-                <Link href="/explore?tab=scholarship" style={{ color: "white" }}>{t("scholarships")}</Link>
+                <Link href="/explore/scholarship" style={{ color: "white" }}>{t("scholarships")}</Link>
               </span>
               <span className="footer-sub-title d-block pt-5">
-                <Link href="/explore?tab=course" style={{ color: "white" }}>{t("courses")}</Link>
+                <Link href="/explore/course" style={{ color: "white" }}>{t("courses")}</Link>
               </span>
               <span className="footer-sub-title d-block pt-5">
                 <Link href="/compare-course" style={{ color: "white" }}>{t("comparisonTool")}</Link>

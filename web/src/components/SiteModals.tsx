@@ -628,10 +628,10 @@ export function SiteModals() {
               </a>
               {exploreOpen && (
                 <div className="accordion-body text-start mb-auto mx-auto">
-                  <Link href="/explore?tab=university" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("uni")}</Link>
-                  <Link href="/explore?tab=course" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("courses")}</Link>
+                  <Link href="/explore/university" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("uni")}</Link>
+                  <Link href="/explore/course" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("courses")}</Link>
                   <Link href="/compare-course" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("compareCourse")}</Link>
-                  <Link href="/explore?tab=scholarship" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("scholarships")}</Link>
+                  <Link href="/explore/scholarship" className="explore-tab d-block mb-3" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("scholarships")}</Link>
                   <Link href="/visit-campus" className="explore-tab d-block" style={{ fontSize: 16, color: "#666" }} onClick={() => setDrawerOpen(false)}>{t("campusVisit")}</Link>
                 </div>
               )}
@@ -686,7 +686,7 @@ export function SiteModals() {
                 )}
               </div>
               <div className="col-12">
-                <Link className="d-block w-100 sidebar-apply-now mt-5" href="/explore/?tab=course" onClick={() => setDrawerOpen(false)}>{t("applyNowUncap")}</Link>
+                <Link className="d-block w-100 sidebar-apply-now mt-5" href="/explore/course" onClick={() => setDrawerOpen(false)}>{t("applyNowUncap")}</Link>
               </div>
               {/* Language selector lives in the header next to the hamburger (globe icon) */}
             </div>

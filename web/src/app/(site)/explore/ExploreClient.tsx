@@ -2,7 +2,6 @@
 
 import { MagnifyingGlass, MapPin } from "@phosphor-icons/react/dist/ssr";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { useRouter, usePathname } from "next/navigation";
 import { CustomDropdown } from "@/components/ui/CustomDropdown";
 import { useT } from "@/components/LocaleProvider";
 
@@ -320,21 +319,20 @@ function EmptyState({ msg }: { msg: string }) {
 
 // -- Main component --
 
+export type ExploreType = "university" | "course" | "scholarship";
+
 export default function ExploreClient({
-  initialTab,
+  type,
   studyFields,
   scholarshipFields,
   states,
 }: {
-  initialTab: string;
+  type: ExploreType;
   studyFields: StudyField[];
   scholarshipFields: StudyField[];
   states: StateOption[];
 }) {
   const t = useT();
-  const router = useRouter();
-  const pathname = usePathname();
-  const [tab, setTab] = useState(initialTab);
 
   const levelOptions = useMemo(
     () => [
@@ -504,14 +502,9 @@ export default function ExploreClient({
     setSchLoading(false);
   }, [schSearch, schSort, schCountry, schState, schStudyField, schLevel]);
 
-  useEffect(() => { fetchUnis(); }, [fetchUnis]);
-  useEffect(() => { fetchCourses(); }, [fetchCourses]);
-  useEffect(() => { fetchScholarships(); }, [fetchScholarships]);
-
-  function switchTab(newTab: string) {
-    setTab(newTab);
-    router.replace(`${pathname}?tab=${newTab}`, { scroll: false });
-  }
+  useEffect(() => { if (type === "university") fetchUnis(); }, [type, fetchUnis]);
+  useEffect(() => { if (type === "course") fetchCourses(); }, [type, fetchCourses]);
+  useEffect(() => { if (type === "scholarship") fetchScholarships(); }, [type, fetchScholarships]);
 
   function resetUniFilters() {
     setUniSearch(""); setUniSort("1");
@@ -545,33 +538,12 @@ export default function ExploreClient({
 
   return (
     <>
-      {/* Tab pills */}
-      <ul className="nav nav-pills mb-10 mt-4" id="pills-tab" role="tablist">
-        {[
-          { key: "university", label: t("uni") },
-          { key: "course", label: t("courses") },
-          { key: "scholarship", label: t("scholarships") },
-        ].map((t) => (
-          <li className="nav-item" role="presentation" key={t.key}>
-            <button
-              className={`nav-link options-toggle${tab === t.key ? " active" : ""}`}
-              type="button"
-              role="tab"
-              aria-selected={tab === t.key}
-              onClick={() => switchTab(t.key)}
-            >
-              {t.label}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      {/* Tab content */}
       <div className="tab-content mb-20" id="pills-tabContent">
 
-        {/* ---- University tab ---- */}
+        {/* ---- University section ---- */}
+        {type === "university" && (
         <div
-          className={`tab-pane fade${tab === "university" ? " show active" : ""} text-white`}
+          className="tab-pane fade show active text-white"
           id="pills-orders"
           role="tabpanel"
           aria-labelledby="pills-orders-tab"
@@ -711,9 +683,12 @@ export default function ExploreClient({
           </div>
         </div>
 
-        {/* ---- Course tab ---- */}
+        )}
+
+        {/* ---- Course section ---- */}
+        {type === "course" && (
         <div
-          className={`tab-pane fade${tab === "course" ? " show active" : ""} text-white`}
+          className="tab-pane fade show active text-white"
           id="pills-courses"
           role="tabpanel"
           aria-labelledby="pills-subscriptions-tab"
@@ -888,9 +863,12 @@ export default function ExploreClient({
           </div>
         </div>
 
-        {/* ---- Scholarship tab ---- */}
+        )}
+
+        {/* ---- Scholarship section ---- */}
+        {type === "scholarship" && (
         <div
-          className={`tab-pane fade${tab === "scholarship" ? " show active" : ""} text-white`}
+          className="tab-pane fade show active text-white"
           id="pills-scholarship"
           role="tabpanel"
           aria-labelledby="pills-subscriptions-tab"
@@ -1021,6 +999,7 @@ export default function ExploreClient({
             </div>
           </div>
         </div>
+        )}
       </div>
     </>
   );

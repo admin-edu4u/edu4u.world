@@ -427,7 +427,7 @@ async function HomeContent() {
                 <div className="enrolment-card-action text-center">
                   <Link
                     className="home-btn-see-uni hovertype3"
-                    href="/explore/?tab=scholarship"
+                    href="/explore/scholarship"
                   >
                     {t("homeBtn7")}
                   </Link>
