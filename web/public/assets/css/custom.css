@@ -3057,6 +3057,35 @@ tr.no-border th {
   }
 }
 
+/* Explore: full screen-width page layout — filters sidebar on the left,
+   search/sort/cards in the right column (col-lg-3 / col-lg-9). Side
+   gutters follow the header: 40px desktop, 24px tablets, 16px phones. */
+.explore-full {
+  width: 100%;
+  max-width: none;
+}
+
+@media screen and (min-width: 900px) {
+  .explore-full {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 899.98px) {
+  .explore-full {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .explore-full {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 /* Drawer: the menu is a Bootstrap .row, so every direct child gets 9px
    gutter padding while the Explore accordion-button adds its own 1.5rem
    padding — zero both so all items (Explore, its sub-links, Blog,

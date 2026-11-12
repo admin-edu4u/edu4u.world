@@ -29,7 +29,7 @@ export default async function ExplorePage({
   );
 
   return (
-    <div className="mw-1200 mx-auto pt-80">
+    <div className="explore-full pt-80">
       <ExploreClient
         initialTab={tab}
         studyFields={localizedFields}
